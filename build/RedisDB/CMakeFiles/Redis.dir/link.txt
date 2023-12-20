@@ -1,0 +1,2 @@
+/usr/bin/ar qc libRedis.a CMakeFiles/Redis.dir/redis_conn.cpp.o CMakeFiles/Redis.dir/RedisDBInterface.cpp.o
+/usr/bin/ranlib libRedis.a

@@ -7,10 +7,13 @@
 #include <bsoncxx/document/view_or_value.hpp>
 
 #include <mongod_conn.h>
-#include <../DBInterface.h>
+#include <../include/DBInterface.h>
  
 
-class MongoDBInterface: public DBInterface<bsoncxx::document::view_or_value, mongocxx::cursor>{
+class MongoDBInterface: public DBInterface<bsoncxx::document::view_or_value,
+                                mongocxx::cursor,
+                                bsoncxx::document::view_or_value,
+                                bsoncxx::document::view_or_value>{
 public:
     MongoDBInterface(const char* uri): client(uri){};
 
@@ -19,15 +22,17 @@ public:
     void set_collection(const char* collection);
 
     void drop();
+
+    mongocxx::cursor find_d(const bsoncxx::document::view_or_value& filter);
     
 public:
     void create(const bsoncxx::document::view_or_value& document);
 
-    mongocxx::cursor read(const bsoncxx::document::view_or_value& read) const;
+    mongocxx::cursor read(const bsoncxx::document::view_or_value& read);
     
     void update(const bsoncxx::document::view_or_value& filter, const bsoncxx::document::view_or_value& update);
 
-    void delete(const bsoncxx::document::view_or_value& filter);
+    void del(const bsoncxx::document::view_or_value& filter);
 
 private:
     MongoConn client;

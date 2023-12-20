@@ -1,6 +1,6 @@
 #pragma once
 
-#include <../connection.h>
+#include <../include/connection.h>
 #include <mongocxx/client.hpp>
 #include <mongocxx/uri.hpp>
 #include <mongocxx/instance.hpp>

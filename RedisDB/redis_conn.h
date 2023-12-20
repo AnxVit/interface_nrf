@@ -1,6 +1,6 @@
 #pragma once
 
-#include <../connection.h>
+#include <../include/connection.h>
 #include <sw/redis++/redis++.h>
 #include <sw/redis++/redis.h>
 #include <hiredis/hiredis.h>

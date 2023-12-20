@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/main.dir/main.cpp.o -o main  -Wl,-rpath,/usr/local/lib MongoDB/libMongo.a RedisDB/libRedis.a /usr/local/lib/libmongocxx.so.3.8.1 /usr/local/lib/libbsoncxx.so.3.8.1 /usr/local/lib/libhiredis.so /usr/local/lib/libredis++.so 

@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/anx_tl/cplusplus/project_nrf/build",
+  "command": "/usr/bin/c++  -I/home/anx_tl/cplusplus/project_nrf/MongoDB -I/home/anx_tl/cplusplus/project_nrf/RedisDB -I/home/anx_tl/cplusplus/project_nrf/MongoDB/../include -I/home/anx_tl/cplusplus/project_nrf/build/MongoDB -I/home/anx_tl/cplusplus/project_nrf/RedisDB/../include -I/home/anx_tl/cplusplus/project_nrf/build/RedisDB -isystem /usr/local/include/bsoncxx/v_noabi -isystem /usr/local/include/mongocxx/v_noabi -g -o CMakeFiles/main.dir/main.cpp.o -c /home/anx_tl/cplusplus/project_nrf/main.cpp",
+  "file": "/home/anx_tl/cplusplus/project_nrf/main.cpp"
+},
+{
+  "directory": "/home/anx_tl/cplusplus/project_nrf/build/MongoDB",
+  "command": "/usr/bin/c++  -I/home/anx_tl/cplusplus/project_nrf/MongoDB/../include -I/home/anx_tl/cplusplus/project_nrf/build/MongoDB -I/home/anx_tl/cplusplus/project_nrf/MongoDB -isystem /usr/local/include/bsoncxx/v_noabi -isystem /usr/local/include/mongocxx/v_noabi -g -o CMakeFiles/Mongo.dir/mongod_conn.cpp.o -c /home/anx_tl/cplusplus/project_nrf/MongoDB/mongod_conn.cpp",
+  "file": "/home/anx_tl/cplusplus/project_nrf/MongoDB/mongod_conn.cpp"
+},
+{
+  "directory": "/home/anx_tl/cplusplus/project_nrf/build/MongoDB",
+  "command": "/usr/bin/c++  -I/home/anx_tl/cplusplus/project_nrf/MongoDB/../include -I/home/anx_tl/cplusplus/project_nrf/build/MongoDB -I/home/anx_tl/cplusplus/project_nrf/MongoDB -isystem /usr/local/include/bsoncxx/v_noabi -isystem /usr/local/include/mongocxx/v_noabi -g -o CMakeFiles/Mongo.dir/MongoDBInterface.cpp.o -c /home/anx_tl/cplusplus/project_nrf/MongoDB/MongoDBInterface.cpp",
+  "file": "/home/anx_tl/cplusplus/project_nrf/MongoDB/MongoDBInterface.cpp"
+},
+{
+  "directory": "/home/anx_tl/cplusplus/project_nrf/build/RedisDB",
+  "command": "/usr/bin/c++  -I/home/anx_tl/cplusplus/project_nrf/RedisDB/../include -I/home/anx_tl/cplusplus/project_nrf/build/RedisDB -I/home/anx_tl/cplusplus/project_nrf/RedisDB -g -o CMakeFiles/Redis.dir/redis_conn.cpp.o -c /home/anx_tl/cplusplus/project_nrf/RedisDB/redis_conn.cpp",
+  "file": "/home/anx_tl/cplusplus/project_nrf/RedisDB/redis_conn.cpp"
+},
+{
+  "directory": "/home/anx_tl/cplusplus/project_nrf/build/RedisDB",
+  "command": "/usr/bin/c++  -I/home/anx_tl/cplusplus/project_nrf/RedisDB/../include -I/home/anx_tl/cplusplus/project_nrf/build/RedisDB -I/home/anx_tl/cplusplus/project_nrf/RedisDB -g -o CMakeFiles/Redis.dir/RedisDBInterface.cpp.o -c /home/anx_tl/cplusplus/project_nrf/RedisDB/RedisDBInterface.cpp",
+  "file": "/home/anx_tl/cplusplus/project_nrf/RedisDB/RedisDBInterface.cpp"
+}
+]
