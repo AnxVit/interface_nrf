@@ -1,9 +1,0 @@
-/home/anx_tl/cplusplus/project_nrf/build/CMakeFiles/main.dir
-/home/anx_tl/cplusplus/project_nrf/build/CMakeFiles/edit_cache.dir
-/home/anx_tl/cplusplus/project_nrf/build/CMakeFiles/rebuild_cache.dir
-/home/anx_tl/cplusplus/project_nrf/build/MongoDB/CMakeFiles/Mongo.dir
-/home/anx_tl/cplusplus/project_nrf/build/MongoDB/CMakeFiles/edit_cache.dir
-/home/anx_tl/cplusplus/project_nrf/build/MongoDB/CMakeFiles/rebuild_cache.dir
-/home/anx_tl/cplusplus/project_nrf/build/RedisDB/CMakeFiles/Redis.dir
-/home/anx_tl/cplusplus/project_nrf/build/RedisDB/CMakeFiles/edit_cache.dir
-/home/anx_tl/cplusplus/project_nrf/build/RedisDB/CMakeFiles/rebuild_cache.dir

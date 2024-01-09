@@ -1,2 +1,0 @@
-/usr/bin/ar qc libMongo.a CMakeFiles/Mongo.dir/mongod_conn.cpp.o CMakeFiles/Mongo.dir/MongoDBInterface.cpp.o
-/usr/bin/ranlib libMongo.a
