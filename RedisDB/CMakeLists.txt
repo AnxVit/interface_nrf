@@ -22,6 +22,10 @@ target_include_directories(${PROJECT_NAME} PUBLIC ${REDIS_PLUS_PLUS_HEADER})
 
 find_library(REDIS_PLUS_PLUS_LIB redis++)
 target_link_libraries(${PROJECT_NAME} ${REDIS_PLUS_PLUS_LIB})
+
+find_package(nlohmann_json REQUIRED)
+target_link_libraries(${PROJECT_NAME} nlohmann_json::nlohmann_json)
+
 # find_package(hiredis REQUIRED)
 # find_package(redis++ REQUIRED)
 

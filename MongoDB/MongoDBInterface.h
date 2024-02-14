@@ -2,7 +2,7 @@
 
 #include <iostream> 
 #include <bsoncxx/builder/basic/document.hpp> 
-#include <bsoncxx/json.hpp> 
+#include <bsoncxx/json.hpp>
 #include <bsoncxx/stdx/optional.hpp>
 #include <bsoncxx/document/view_or_value.hpp>
 
@@ -13,7 +13,9 @@
 class MongoDBInterface: public DBInterface<bsoncxx::document::view_or_value,
                                 mongocxx::cursor,
                                 bsoncxx::document::view_or_value,
-                                bsoncxx::document::view_or_value>{
+                                bsoncxx::document::view_or_value,
+                                bsoncxx::document::view_or_value,
+                                mongocxx::cursor>{
 public:
     MongoDBInterface(const char* uri): client(uri){};
 
@@ -23,18 +25,22 @@ public:
 
     void drop();
 
-    mongocxx::cursor find_d(const bsoncxx::document::view_or_value& filter);
+    mongocxx::cursor find(const bsoncxx::document::view_or_value& filter);
+
+    bsoncxx::document::value from_JSON(const char* path);
+
+    void createUniDB(const char * config_path, int n);
     
 public:
-    void create(const bsoncxx::document::view_or_value& document);
+    bool create(const bsoncxx::document::view_or_value& document);
 
     mongocxx::cursor read(const bsoncxx::document::view_or_value& read);
     
-    void update(const bsoncxx::document::view_or_value& filter, const bsoncxx::document::view_or_value& update);
+    bool update(const bsoncxx::document::view_or_value& filter, const bsoncxx::document::view_or_value& update);
 
     void del(const bsoncxx::document::view_or_value& filter);
 
-private:
+public:
     MongoConn client;
     mongocxx::database db;
     mongocxx::collection collect;

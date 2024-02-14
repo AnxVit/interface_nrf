@@ -5,30 +5,45 @@
 #include <redis_conn.h>
 #include <../include/DBInterface.h>
 #include <vector>
+
+using OptStr = sw::redis::OptionalString;
+using StrView = sw::redis::StringView;
  
 
-class RedisDBInterface: public DBInterface<std::pair<sw::redis::StringView,sw::redis::StringView>, 
-                        sw::redis::OptionalString, 
-                        sw::redis::StringView, 
-                        sw::redis::StringView>{
-private:
+class RedisDBInterface: public DBInterface<std::pair<StrView,StrView>, 
+                        OptStr, 
+                        StrView, 
+                        StrView,
+                        StrView,
+                        std::vector<OptStr>>{
+public:
     RedisConn redis;
     std::shared_ptr<sw::redis::Redis> conn;
 
 public:
-    RedisDBInterface(const char* uri): redis(uri), conn(redis.connection()){};
+    RedisDBInterface(const char* uri): redis(uri){
+        conn = redis.connection();
+    }
 
-//    void drop();
+    void createUniDB(const char * config_path, int n);
+    std::vector<OptStr> find(const StrView &nfTypeSearch);
     
-    std::vector<sw::redis::OptionalString> find(const std::string nfTypeSearch);
+    bool hcreate(const StrView& key,
+                 const StrView& field,
+                 const StrView& dataField);
+    OptStr hread(const StrView &key, const StrView &field);
+    bool hupdate(const StrView& key,
+                 const StrView& field,
+                 const StrView& dataField);
+    long long hdel(const StrView &key, const StrView &field);
     
 public:
-    void create(const std::pair<sw::redis::StringView, sw::redis::StringView>& key_val);
+    bool create(const std::pair<StrView, StrView>& key_val);
 
-    sw::redis::OptionalString read(const sw::redis::StringView& key);
+    OptStr read(const StrView& key);
     
-    void update(const sw::redis::StringView& filter, const sw::redis::StringView& update);
+    bool update(const StrView& filter, const StrView& update);
 
-    void del(const sw::redis::StringView& key);
+    void del(const StrView& key);
 
 };
